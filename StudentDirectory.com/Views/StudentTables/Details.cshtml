@@ -1,0 +1,67 @@
+﻿@model StudentDirectory.com.StudentTable
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address.BuildingNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address.BuildingNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class.Class)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class.Class)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Univeristytable.university)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Univeristytable.university)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

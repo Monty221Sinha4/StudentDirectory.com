@@ -1,0 +1,52 @@
+﻿@model IEnumerable<StudentDirectory.com.Address>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildingNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.County.County)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Postcode.Postcode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildingNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.County.County)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Postcode.Postcode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AddressID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AddressID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AddressID })
+        </td>
+    </tr>
+}
+
+</table>
